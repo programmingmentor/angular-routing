@@ -1,0 +1,14 @@
+<div *ngIf="!id">
+  <h2>Product List</h2>
+  <ul>
+      <li *ngFor="let product of products"> <a routerLink="{{product.title}}"> {{ product.title }} </a> </li>
+  </ul>
+</div>
+
+<div *ngIf="id">
+  <h2>Product Info</h2>
+  <p>Title: {{ currProduct.title }}</p>
+  <p>Price: {{ currProduct.price }}</p>
+</div>
+
+
